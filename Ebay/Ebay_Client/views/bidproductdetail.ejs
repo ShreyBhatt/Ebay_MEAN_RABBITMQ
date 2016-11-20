@@ -1,0 +1,202 @@
+
+<html  ng-app="bidproductdetail">
+
+<head>
+    <title>Bid Product Details</title>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="/angularjs/bidproductdetail.js"></script>
+
+</head>
+
+<body  ng-controller="bidproductdetail_controller">
+
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
+
+    <div class="gap gap-small"></div>
+
+</div>
+
+<nav class="navbar navbar-inverse navbar-main yamm">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/homepage">
+                <img src="img/ebay.png" alt="Image Alternative text" title="Image Title" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+            <form class="navbar-form navbar-left navbar-main-search" role="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Ebay" />
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/ProfilePage"><i class="fa fa-reorder"></i>&nbsp; My Ebay<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-category">
+
+                        <li><a href="/advertisement"><i></i>Sell</a>
+
+                        </li>
+
+                        <li><a href="/bid"><i></i>Bid</a>
+
+                        </li>
+                        <li><a href="/allbidpage"><i></i>All Bids</a>
+
+                        </li>
+                        <li><a href="/mybids"><i></i>My Bids</a>
+
+                        </li>
+                        <li><a href="/myorders"><i></i>My Orders</a>
+
+                        </li>
+                        <li><a href="/myadvertisement"><i></i>My advertisements</a>
+
+                        </li>
+
+                        </li>
+                        <li><a href="/lastlogin"><i ></i>Last Login</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signout">Sign Out</a>
+                </li>
+                <li><a href="/createacc">Create Account</a>
+                </li>
+                <li class="dropdown">
+                    <a class="fa fa-shopping-cart" href="/cart"></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="gap"></div>
+<div class="container">
+    <div class="gap"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+
+
+                <div>
+                    <div class="product product-sm-left ">
+
+                        <img class="product-img" src="img/Macbook.jpg" alt="Image Alternative text" title="Image Title">
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <form action="/bidding" method="POST">
+        <div class="col-md-6">
+
+
+            <h1 ><%=result[0].bidproductname%></h1> <br><br><br>
+            <p class="product-page-price" products.price >Latest Price:$<%=result[0].bidprice%></p>
+
+            <br><br>
+            <input id="bidprice"type="text" min="<%=result[0].bidprice%>" name="bidprice" placeholder="Enter your Bid Price">
+            <br><br><br>
+            <ul class="product-page-actions-list">
+                <li> <button type="submit" class="btn btn-danger" >Bid Now</button>
+
+                </li>
+
+            </ul>
+        </div>
+            </form >
+    </div>
+    <div class="gap"></div>
+    <div class="tabbable product-tabs">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#tab-1" data-toggle="tab">Description</a>
+            </li>
+            <li><a href="#tab-2" data-toggle="tab">Additional Details</a>
+            </li>
+
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab-1">
+                <p ><%=result[0].biddescription%></p>
+
+            </div>
+            <div class="tab-pane fade" id="tab-2">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>Seller</td>
+                        <td><%=result[0].bidsellerid.username%> </td>
+                    </tr>
+                    <tr>
+                        <td>Shipped From</td>
+                        <td ><%=result[0].bidshippingfrom%></td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div class="large"></div>
+
+
+</div>
+<div class="gap"></div>
+
+</div>
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/icheck.js"></script>
+<script src="js/ionrangeslider.js"></script>
+<script src="js/jqzoom.js"></script>
+<script src="js/card-payment.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/magnific.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

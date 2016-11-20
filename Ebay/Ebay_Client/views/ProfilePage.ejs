@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///C:/Users/Shrey/Desktop/ebay/myfiles/template/ProfilePage.html -->
+<html ng-app="profile">
+    <script src="./ProfilePage_files/w3data.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./ProfilePage_files/productSectionStyle.css">
+
+    <script src="./ProfilePage_files/jquery.min.js.download"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="./ProfilePage_files/bootstrap.min.js.download"></script>
+
+    <link href="./ProfilePage_files/css" rel="stylesheet" type="text/css">
+
+    <link href="./ProfilePage_files/css(1)" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./ProfilePage_files/bootstrap.css">
+    <link rel="stylesheet" href="./ProfilePage_files/font-awesome.css">
+    <link rel="stylesheet" href="./ProfilePage_files/styles.css">
+    <link rel="stylesheet" href="./ProfilePage_files/mystyles.css">
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="/angularjs/profile.js"></script>
+
+
+    <title>Profile</title>
+</head>
+<body ng-controller="profile_controller">
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
+
+    <div class="gap gap-small"></div>
+
+</div>
+
+<nav class="navbar navbar-inverse navbar-main yamm">
+    <div class="container">
+
+
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="/homepage">
+
+                <img src="img/ebay.png" alt="Image Alternative text" title="Image Title" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+            <form class="navbar-form navbar-left navbar-main-search" role="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Ebay" />
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/ProfilePage"><i class="fa fa-reorder"></i>&nbsp; My Ebay<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-category">
+                        <li><a href="/advertisement"><i></i>Sell</a>
+
+                        </li>
+
+                        <li><a href="/bid"><i></i>Bid</a>
+
+                        </li>
+                        <li><a href="/allbidpage"><i></i>All Bids</a>
+
+                        </li>
+                        <li><a href="/mybids"><i></i>My Bids</a>
+
+                        </li>
+                        <li><a href="/myorders"><i></i>My Orders</a>
+
+                        </li>
+                        <li><a href="/myadvertisement"><i></i>My advertisements</a>
+
+                        </li>
+
+                        </li>
+                        <li><a href="/lastlogin"><i ></i>Last Login</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signout">Sign Out</a>
+                </li>
+                <li><a href="/createacc">Create Account</a>
+                </li>
+                <li class="dropdown">
+                    <a class="fa fa-shopping-cart" href="/cart"></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="gap"></div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12" style="height: 100px;margin-left: -35px;/* background-image: url(http://p.ebaystatic.com/aw/social/profile_coverimg_wood.jpg) */"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2" style="height:98px;margin-left: -35px;/* background-image:url(&#39;http://p.ebaystatic.com/aw/social/profile_coverimg_wood.jpg&#39;) */">
+
+        </div>
+
+        <h2 >My Profile</h2><br><br>
+        <div class="col-md-8" style="height: 98px">
+            <div class="col-md-2"><img src="img/mypic.jpg" class="img-thumbnail" style="height: 58px; width :98px" ></div>
+            <div class="col-md-8">
+                <div class="row" style="height: 35px;">
+                </div>
+
+                <div class="row">
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-2" style="height:98px;/* background-image:url(&#39;http://p.ebaystatic.com/aw/social/profile_coverimg_wood.jpg&#39;) */">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="page-header">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <b> Ebay Handle:</b>
+                    </td>
+                    <td style="width: 50%">
+
+                    </td>
+                    <td>
+                        <%=result[0].username%>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="page-header">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <b> Birth Date:</b>
+                    </td>
+                    <td style="width: 42%">
+
+                    </td>
+                    <td>
+                        <%=result[0].birthdate%>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="page-header">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <b> Location:</b>
+                    </td>
+                    <td style="width: 50%">
+
+                    </td>
+                    <td>
+                        <%=result[0].location%>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="page-header">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <b> Contact No:</b>
+                    </td>
+                    <td style="width: 47%">
+
+                    </td>
+                    <td>
+                        <%=result[0].contact%>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+    <div class="gap gap-large"></div>
+    <div class="gap gap-large"></div>
+
+</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>

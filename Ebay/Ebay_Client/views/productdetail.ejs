@@ -1,0 +1,206 @@
+
+<html  ng-app="productdetail">
+
+<head>
+    <title>Product Details</title>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="/angularjs/productdetail.js"></script>
+
+</head>
+
+<body  ng-controller="productdetail_controller">
+
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
+
+    <div class="gap gap-small"></div>
+
+</div>
+
+<nav class="navbar navbar-inverse navbar-main yamm">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/homepage">
+                <img src="img/ebay.png" alt="Image Alternative text" title="Image Title" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+            <form class="navbar-form navbar-left navbar-main-search" role="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Ebay" />
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/ProfilePage"><i class="fa fa-reorder"></i>&nbsp; My Ebay<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-category">
+
+                        <li><a href="/advertisement"><i></i>Sell</a>
+
+                        </li>
+
+                        <li><a href="/bid"><i></i>Bid</a>
+
+                        </li>
+                        <li><a href="/allbidpage"><i></i>All Bids</a>
+
+                        </li>
+                        <li><a href="/mybids"><i></i>My Bids</a>
+
+                        </li>
+                        <li><a href="/myorders"><i></i>My Orders</a>
+
+                        </li>
+                        <li><a href="/myadvertisement"><i></i>My advertisements</a>
+
+                        </li>
+
+                        </li>
+                        <li><a href="/lastlogin"><i ></i>Last Login</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signout">Sign Out</a>
+                </li>
+                <li><a href="/createacc">Create Account</a>
+                </li>
+                <li class="dropdown">
+                    <a class="fa fa-shopping-cart" href="/cart"></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="gap"></div>
+<div class="container">
+    <div class="gap"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+
+
+                <div>
+                    <div class="product product-sm-left ">
+
+                        <img class="product-img" src="img/Macbook.jpg" alt="Image Alternative text" title="Image Title">
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-md-6">
+
+
+            <h1 ><%=result[0].productname%></h1> <br><br><br>
+            <h3 class="product-page-price" products.price >Available Quantity:<%=result[0].quantity%></h3>
+
+            <p class="product-page-price" products.price >$<%=result[0].price%></p>
+
+
+
+            <br><br><br>
+            <ul class="product-page-actions-list">
+                <li class="product-page-qty-item">
+                    <button class="product-page-qty product-page-qty-minus">-</button>
+                    <input id="quantity" class="product-page-qty product-page-qty-input" type="text" value="1" max="<%=result[0].quantity%>" />
+                    <button class="product-page-qty product-page-qty-plus">+</button>
+                </li>
+                <li><a class="btn btn-lg btn-success" href="/addcart"><i class="fa fa-shopping-cart"></i>ADD TO CART</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="gap"></div>
+    <div class="tabbable product-tabs">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#tab-1" data-toggle="tab">Description</a>
+            </li>
+            <li><a href="#tab-2" data-toggle="tab">Additional Details</a>
+            </li>
+
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab-1">
+                <p ><%=result[0].description%></p>
+
+            </div>
+            <div class="tab-pane fade" id="tab-2">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>Seller</td>
+                        <td><%=result[0].sellerid.username%> </td>
+                    </tr>
+                    <tr>
+                        <td>Shipped From</td>
+                        <td ><%=result[0].shippingfrom%></td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <div class="large"></div>
+
+
+</div>
+<div class="gap"></div>
+
+</div>
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/icheck.js"></script>
+<script src="js/ionrangeslider.js"></script>
+<script src="js/jqzoom.js"></script>
+<script src="js/card-payment.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/magnific.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

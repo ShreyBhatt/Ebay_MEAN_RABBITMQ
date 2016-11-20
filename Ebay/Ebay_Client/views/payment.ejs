@@ -1,0 +1,210 @@
+
+<!-- saved from url=(0065)file:///C:/Users/Shrey/Desktop/ebay/myfiles/template/payment.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Payment</title>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="keywords" content="Template, html, premium, themeforest" />
+    <meta name="description" content="TheBox - premium e-commerce template">
+    <meta name="author" content="Tsoy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+</head>
+<body>
+
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
+
+    <div class="gap gap-small"></div>
+
+</div>
+
+<nav class="navbar navbar-inverse navbar-main yamm">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/homepage">
+                <img src="./payment_files/ebay.png" alt="Image Alternative text" title="Image Title">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+            <form class="navbar-form navbar-left navbar-main-search" role="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Ebay">
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="/payment"></a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/ProfilePage"><i class="fa fa-reorder"></i>&nbsp; My Ebay<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-category">
+
+                        <li><a href="/advertisement"><i></i>Sell</a>
+
+                        </li>
+
+                        <li><a href="/bid"><i></i>Bid</a>
+
+                        </li>
+                        <li><a href="/allbidpage"><i></i>All Bids</a>
+
+                        </li>
+                        <li><a href="/mybids"><i></i>My Bids</a>
+
+                        </li>
+                        <li><a href="/myorders"><i></i>My Orders</a>
+
+                        </li>
+                        <li><a href="/myadvertisement"><i></i>My advertisements</a>
+
+                        </li>
+
+                        </li>
+                        <li><a href="/lastlogin"><i ></i>Last Login</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signout">Sign Out</a>
+                </li>
+                <li><a href="/createacc">Create Account</a>
+                </li>
+                <li class="dropdown">
+                    <a class="fa fa-shopping-cart" href="/cart"></a>
+
+                </li>
+            </ul>
+            </div>
+    </div>
+</nav>
+
+<!-- <form action="index.html" method="post" class="validate">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Credit Card Payment</div>
+        <div class="panel-body">
+
+                <div class="form-group creditcardDiv">
+                    <label class="inputCardNo"></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="inputCardNo" id="inputCardNo" placeholder="Credit Card No" required="" autofocus="" maxlength="16">
+                    </div>
+                </div>
+                <div class="form-group creditcardDiv">
+                    <label for="inputPassword"></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" required="" name="inputExpDate" id="inputExpDate" maxlength="5" placeholder="MM/YY">
+                    </div>
+                </div>
+                <div class="form-group creditcardDiv">
+                    <label for="inputPassword"></label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" maxlength="4" required="" name="inputCVV" id="inputCVV" placeholder="CVV">
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <div class="pull-left signIn">
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+        </div>
+    </div></form>
+  <div class="gap"></div> -->
+<div class="gap"></div>
+<div class="container">
+
+
+
+
+
+
+    <div class="gap"></div>
+
+
+    <div class="container">
+
+        <div><h2 class="widget-title-lg">Credit Card Payment</h2></div>
+        <div class="gap gap-small"></div>
+
+        <div class="row" data-gutter="60">
+            <div class="col-md-5">
+                <h4 align="center"><%= invalidcard %></h4>
+
+                <form action="/validate" method="post" class="validate">
+                    <div class="form-group">
+                        <label>Credit Card No.</label>
+                        <input type="text" class="form-control" name="inputCardNo" id="inputCardNo" placeholder="Credit Card No" required="true" autofocus="true" maxlength="16">
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <div id="fixedPrice">
+                            <div class="form-group">
+                                <label>Expiry Date</label>
+                                <input type="text" class="form-control" required="true" name="inputExpDate" id="inputExpDate" maxlength="5" placeholder="MM/YY">
+                            </div>
+
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="password" class="form-control" maxlength="4" required="true" name="inputCVV" id="inputCVV" placeholder="CVV">
+                            </div>
+
+
+
+                        </div>
+
+                        <div id="" style="display: none">
+                            <div class="form-group">
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <input class="btn btn-primary" type="submit" value="Submit"  />
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="gap gap-large"></div>
+    <div class="gap gap-large"></div>
+
+
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/icheck.js"></script>
+<script src="js/ionrangeslider.js"></script>
+<script src="js/jqzoom.js"></script>
+<script src="js/card-payment.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/magnific.js"></script>
+<script src="js/custom.js"></script>
+
+</body></html>

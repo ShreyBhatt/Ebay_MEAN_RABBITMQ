@@ -1,0 +1,169 @@
+<html ng-app="getcartapp">
+
+<head>
+    <title>Shopping Cart</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="keywords" content="Template, html, premium, themeforest" />
+    <meta name="description" content="TheBox - premium e-commerce template">
+    <meta name="author" content="Tsoy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="/angularjs/shoppingcart.js"></script>
+
+</head>
+
+<body  ng-controller="getcart" ng-init="getcart()">
+
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-pwd-dialog">
+
+</div>
+<nav class="navbar navbar-inverse navbar-main yamm">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="/homepage">
+                <img src="img/ebay.png" alt="Image Alternative text" title="Image Title" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+            <form class="navbar-form navbar-left navbar-main-search" role="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Ebay" />
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/ProfilePage"><i class="fa fa-reorder"></i>&nbsp; My Ebay<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-category">
+
+                        <li><a href="/advertisement"><i></i>Sell</a>
+
+                        </li>
+
+                        <li><a href="/bid"><i></i>Bid</a>
+
+                        </li>
+                        <li><a href="/allbidpage"><i></i>All Bids</a>
+
+                        </li>
+                        <li><a href="/mybids"><i></i>My Bids</a>
+
+                        </li>
+                        <li><a href="/myorders"><i></i>My Orders</a>
+
+                        </li>
+                        <li><a href="/myadvertisement"><i></i>My advertisements</a>
+
+                        </li>
+
+                        </li>
+                        <li><a href="/lastlogin"><i ></i>Last Login</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signout">Sign Out</a>
+                </li>
+                <li><a href="/createacc">Create Account</a>
+                </li>
+                <li class="dropdown">
+                    <a class="fa fa-shopping-cart" href="/cart"></a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <header class="page-header">
+        <h2 >My Shopping Cart</h2>
+    </header>
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table table table-shopping-cart">
+                <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="x in getcartitems">
+                    <td class="table-shopping-cart-img">
+                        <a href="#">
+                            <img src="img/macbook2.jpg" alt="Image Alternative text" title="Image Title" />
+                        </a>
+                    </td>
+                    <td class="table-shopping-cart-title" >{{x.productname}}
+                    </td>
+                    <td >{{x.price}}</td>
+                    <td>
+                        {{x.quantity}}
+                    </td>
+                    <td >{{x.total}}</td>
+                    <td>
+                        <a class="fa fa-close table-shopping-remove" href="/remove"></a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="gap gap-small"></div>
+        </div>
+        <div class="col-md-2">
+            <ul class="shopping-cart-total-list">
+                <li><span>Subtotal</span><span>{{grandtotal}}</span>
+                </li>
+                <li><span>Shipping</span><span>Free</span>
+                </li>
+
+                <li><span>Total</span><span>{{grandtotal}}</span>
+                </li>
+            </ul><a class="btn btn-primary" href="/payment">Checkout</a>
+        </div>
+    </div>
+    <ul class="list-inline">
+        <li><a class="btn btn-default" href="/homepage">Continue Shopping</a>
+        </li>
+
+    </ul>
+</div>
+<div class="gap"></div>
+
+
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/icheck.js"></script>
+<script src="js/ionrangeslider.js"></script>
+<script src="js/jqzoom.js"></script>
+<script src="js/card-payment.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/magnific.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+
+
+</body>
+
+</html>

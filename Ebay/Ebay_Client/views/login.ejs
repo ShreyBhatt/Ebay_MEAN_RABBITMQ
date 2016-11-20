@@ -1,0 +1,172 @@
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="angularjs/login.js"></script>
+
+
+</head>
+<title>Login</title>
+
+
+<body ng-app="login" ng-controller="login">
+
+<div class="col-xs-12" style="height:50px;">
+
+    <img class="center-block" src="img/ebay.png" height="100px" />
+
+  <h4 align="center"><%= invalid %></h4>
+
+
+    <div class="cover-container">
+
+        <div class="masthead clearfix">
+            <div class="inner">
+                <h3 class="masthead-brand"></h3>
+                <ul class="nav masthead-nav">
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="inner cover">
+
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+                    <!-- tabs -->
+
+                    <ul id="dTab" class="nav nav-tabs">
+                        <li class="active" ><a href="#pane1" data-toggle="tab" ><span class="glyphicon glyphicon-circle-arrow-right"></span>  Login</a></li>
+
+
+                        <li><a href="#pane2" data-toggle="tab"><span class="glyphicon glyphicon-plus"></span>  Sign Up</a></li>           <!--<li><a href="#pane3" data-toggle="tab"></a></li>-->
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="pane1" class="tab-pane fade in active">
+                            <!-- Register Username -->
+                            <form role="form" action='/checkLogin' method="POST">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Username/Handle</label>
+                                    <input type="text" class="form-control" id="username" ng-model="username" name="username" placeholder="Username/Handle" required="true" >
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="password"  placeholder="Password" name="password" required="true" placeholder="Password">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" >Sign In</button>
+
+                            </form>
+                        </div>
+
+                        <div id="pane2" class="tab-pane fade">
+                            <!-- login -->
+
+                            <form action="/checkRegister" method="POST">
+                                <fieldset>
+
+                                    <div class="form-group">
+                                        <label class="control-label"  for="username">Username/Handle</label>
+                                        <input type="text" id="username" ng-change="submit();" name="username1" ng-model="username1" required="true" placeholder="Username/Handle"class="form-control">
+                                    </div>
+
+
+                                    <div class="alert alert-danger" ng-hide="invalid_username" >
+                                        <strong>Username/Handle already exists</strong>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <!-- E-mail -->
+                                        <label class="control-label" for="email">E-mail</label>
+                                        <input type="email" ng-change="submitnew();" id="email1" name="email1" required="true" ng-model="email1" placeholder="Email" class="form-control">
+                                    </div>
+
+                                    <div class="alert alert-danger" ng-hide="invalid_email" >
+                                        <strong>Email already exists</strong>
+                                    </div>
+
+
+
+
+                                    <div class="form-group">
+                                        <!-- Password-->
+                                        <label class="control-label" for="password">Password</label>
+                                        <input type="password" id="password1" name="password1" ng-model="password1" placeholder="Password" required="true" class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <!-- Birthdate -->
+                                        <label class="control-label"  for="password_confirm">Birth Date</label>
+                                        <input type="date" id="birthdate" name="birthdate" required="true" ng-model="birthdate" placeholder="YYY-MM-DD" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Location -->
+                                        <label class="control-label"  for="password_confirm">Location</label>
+                                        <input type="text" id="location" name="location" required="true" placeholder="Location" ng-model="location" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Contact -->
+                                        <label class="control-label"  for="password_confirm">Contact</label>
+                                        <input type="text" id="contact" name="contact" required="true" ng-model="contact" placeholder="Contact Number"class="form-control">
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+                                    <button class="btn btn-primary">Sign Up</button>
+
+
+
+                                </fieldset>
+                            </form>
+                            <!-- login-ends-->
+
+                        </div>
+
+
+
+
+
+                        </form>
+
+                        <!-- password forget -->
+                    </div>
+
+
+                </div>
+
+
+                <!-- -->
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+</body>
+
+
+</html>

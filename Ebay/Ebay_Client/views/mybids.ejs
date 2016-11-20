@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html ng-app="bid">
+
+<head>
+    <title>My Bids</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <meta name="keywords" content="Template, html, premium, themeforest" />
+    <meta name="description" content="TheBox - premium e-commerce template">
+    <meta name="author" content="Tsoy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyles.css">
+
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <script
+            src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="/angularjs/bid.js"></script>
+
+</head>
+
+<body ng-controller="bid_controller">
+
+<div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
+
+    <div class="gap gap-small"></div>
+
+</div>
+<script type="javascript">
+
+    var ejs= require('ejs');
+
+</script>
+
+<nav class="navbar navbar-inverse navbar-main yamm">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/homepage">
+                <img src="img/ebay.png" alt="Image Alternative text" title="Image Title"  />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+
+            <form class="navbar-form navbar-left navbar-main-search" role="search">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search the Ebay" />
+                </div>
+                <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+            </form>
+            <ul class="nav navbar-nav">
+                <li class="dropdown"><a href="/ProfilePage"><i class="fa fa-reorder"></i>&nbsp; My Ebay<i class="drop-caret" data-toggle="dropdown"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-category">
+
+                        <li><a href="/advertisement"><i></i>Sell</a>
+
+                        </li>
+
+                        <li><a href="/bid"><i></i>Bid</a>
+
+                        </li>
+                        <li><a href="/allbidpage"><i></i>All Bids</a>
+
+                        </li>
+                        <li><a href="/mybids"><i></i>My Bids</a>
+
+                        </li>
+                        <li><a href="/myorders"><i></i>My Orders</a>
+
+                        </li>
+                        <li><a href="/myadvertisement"><i></i>My advertisements</a>
+
+                        </li>
+
+                        </li>
+                        <li><a href="/lastlogin"><i ></i>Last Login</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signout">Sign Out</a>
+                </li>
+                <li><a href="/createacc">Create Account</a>
+                </li>
+                <li class="dropdown">
+                    <a class="fa fa-shopping-cart" href="/cart"></a>
+
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="gap"></div>
+<div class ="container">
+    <h3 class="widget-title-lg">My Bids</h3>
+    <div class="row" data-gutter="15">
+        <div class="col-md-3" ng-repeat="bid in bids">
+            <div class="product product-sm-left ">
+                <ul class="product-labels"></ul>
+                <div class="product-img-wrap">
+                    <img class="product-img" src="img/macbook.jpg" alt="Image Alternative text" title="Image Title" />
+                </div>
+                <a class="product-link" ng-href="#"></a>
+                <div class="product-caption">
+
+                    <h5 class="product-caption-title" ng-bind="bid.bidproductname"></h5>
+                    <div class="product-caption-price"><span class="product-caption-price-new" ng-bind="bid.bidprice"></span>
+                    </div>
+                    <ul class="product-caption-feature-list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<div class="gap"></div>
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/icheck.js"></script>
+<script src="js/ionrangeslider.js"></script>
+<script src="js/jqzoom.js"></script>
+<script src="js/card-payment.js"></script>
+<script src="js/owl-carousel.js"></script>
+<script src="js/magnific.js"></script>
+<script src="js/custom.js"></script>
+
+
+
+
+</body>
+
+</html>
